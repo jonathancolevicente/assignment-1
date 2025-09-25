@@ -1,17 +1,22 @@
-# Exercise 2: Credit Score Evaluator (Conditionals)
-# Concepts: Input, int conversion, if/elif/else, logical operators, chained comparisons.
+credit_score = int(input("Enter credit score: "))
 
-# Business Context: In banking, evaluate a customer's credit score to determine loan eligibility.
+if credit_score < 300 or credit_score > 850:
+    print("Invalid score.")
 
-# Task:
+elif credit_score >= 750:
 
-# Prompt for a credit score (int, assume 300-850 range).
-# Use conditionals to categorize:
-# = 750: "Excellent - Loan Approved"
+    print("Excellent - Loan Approved")
 
-# 700 <= score < 750: "Good - Loan Approved with Review"
-# 600 <= score < 700: "Fair - Loan Conditional"
-# < 600: "Poor - Loan Denied"
-# If score < 300 or > 850, print "Invalid score."
-# Add a message: If approved, "Interest rate: Low"; else "Seek credit improvement."
+elif 700 <= credit_score < 750:
+    print("Good - Loan Approved with Review")
 
+elif 600 <= credit_score < 700:
+    print("Fair - Loan Conditional")
+
+else:
+    print("Poor - Loan Denied")
+
+if credit_score >= 600:
+    print("Interest rate: Low")
+else:
+    print("Seek credit improvement.")
